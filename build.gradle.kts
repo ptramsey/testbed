@@ -12,12 +12,6 @@ repositories {
     mavenCentral()
 }
 
-/*dependencies {
-    implementation(kotlin("stdlib"))
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
-    testCompile("junit", "junit", "4.12")
-}*/
-
 kotlin {
     /* Targets configuration omitted. 
     *  To find out how to configure the targets, please follow the link:
@@ -29,7 +23,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-common"))
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.20.0")
             }
         }
         val commonTest by getting {
@@ -41,18 +35,16 @@ kotlin {
     }
 }
 
-
-
-buildscript {
-    repositories {
-        jcenter()
-        google()
-
-        maven ( url = "https://plugins.gradle.org/m2/" )
-    }
-    dependencies {
-        val kotlinVersion = "1.3.72"
-        classpath(kotlin("gradle-plugin", version = kotlinVersion))
-        classpath(kotlin("serialization", version = kotlinVersion))
-    }
-}
+//buildscript {
+//    repositories {
+//        jcenter()
+//        google()
+//
+//        maven ( url = "https://plugins.gradle.org/m2/" )
+//    }
+//    dependencies {
+//        val kotlinVersion = "1.3.72"
+//        classpath(kotlin("gradle-plugin", version = kotlinVersion))
+//        classpath(kotlin("serialization", version = kotlinVersion))
+//    }
+//}
